@@ -24,7 +24,7 @@ def convert(message):
     values = message.text.split(' ')
 
     if len(values) != 3:
-        raise APIException('Слишком мало параметров')
+        raise APIException('Недостаток или Переполнение параметров.')
 
     quote, base, amount = values
     final_base = Converter.get_price(quote, base, amount)
